@@ -2,7 +2,7 @@
 const isDevelopment = import.meta.env.MODE === 'development';
 
 // The backend URL that will be used in production (Render)
-const PRODUCTION_API_URL = 'https://stock-sense-api.onrender.com';
+const PRODUCTION_API_URL = 'https://expert-succotash-l3sv.onrender.com';
 
 // The backend URL used during local development
 const DEVELOPMENT_API_URL = 'http://localhost:5000';
