@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthModal from './AuthModal';
 import { Boxes } from './ui/background-boxes';
-
-const API_URL = 'http://localhost:5000/api';
+import { API_URL } from '../config';
 
 const LandingPage: React.FC = () => {
   const [modal, setModal] = useState<'signin' | 'signup' | null>(null);
@@ -26,7 +25,7 @@ const LandingPage: React.FC = () => {
     console.log('Signup request payload:', { name, email, password: password ? '********' : null });
 
     try {
-      const res = await fetch(`${API_URL}/signup`, {
+      const res = await fetch(`${API_URL}/api/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password })
@@ -43,7 +42,7 @@ const LandingPage: React.FC = () => {
       }
 
       // Auto-login after signup
-      const loginRes = await fetch(`${API_URL}/login`, {
+      const loginRes = await fetch(`${API_URL}/api/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
@@ -86,7 +85,7 @@ const LandingPage: React.FC = () => {
     console.log('Login attempt for email:', email);
 
     try {
-      const res = await fetch(`${API_URL}/login`, {
+      const res = await fetch(`${API_URL}/api/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
