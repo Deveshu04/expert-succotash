@@ -9,7 +9,7 @@ import {
   IconLogout,
   IconUser
 } from '@tabler/icons-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { cn } from '../lib/utils';
 import { API_URL } from '../config';
 import PortfolioManager from './PortfolioManager';
