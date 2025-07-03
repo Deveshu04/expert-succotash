@@ -1,0 +1,114 @@
+# Node modules
+node_modules/
+**/node_modules/
+/node_modules/
+/backend/node_modules/
+/project/node_modules/
+
+# Build output
+dist/
+build/
+**/dist/
+**/build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment variables - important for security
+.env
+.env.*
+.env.local
+.env.development
+.env.test
+.env.production
+**/.env
+**/.env.*
+/backend/.env
+/project/.env
+!.env.example
+
+# SQLite database files
+*.sqlite
+*.sqlite3
+*.db
+backend/data/*.sqlite
+backend/data/*.sqlite3
+backend/data/*.db
+# Keep the database schema if needed
+!backend/data/schema.sql
+
+# Cache and temporary files
+.cache/
+.temp/
+.tmp/
+**/.cache/
+coverage/
+.coverage/
+.nyc_output/
+.eslintcache
+.stylelintcache
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# Editor/IDE specific
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Package manager specific
+.npm
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+yarn-error.log
+
+# Vercel
+.vercel
+.now
+
+# Local development specific files
+.local
+*.local
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional: Exclude specific files
+# config.js
+# config.ts

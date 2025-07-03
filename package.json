@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "motion": "^12.23.0",
+    "react-router-dom": "^7.6.3",
+    "tailwind-merge": "^3.3.1"
+  }
+}
