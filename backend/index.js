@@ -9,7 +9,7 @@ const path = require('path');
 // Environment variables
 const PORT = process.env.PORT || 5000;
 const NODE_ENV = process.env.NODE_ENV || 'development';
-const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3000';
+const FRONTEND_URL = process.env.FRONTEND_URL || 'https://stocksense-zeta.vercel.app/';
 
 // Import database models
 const { testConnection, initDatabase } = require('./models/database');
@@ -99,7 +99,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 app.use(helmet()); // Adds various HTTP headers for security
 app.use(cors({
   origin: isProduction
-    ? [FRONTEND_URL, 'https://stock-sense.vercel.app']
+    ? [FRONTEND_URL, 'https://stock-sense.vercel.app', 'https://stocksense-zeta.vercel.app']
     : '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
